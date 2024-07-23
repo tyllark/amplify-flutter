@@ -12,5 +12,4 @@ export '../exception/amplify_exception.dart'
 export 'analytics/analytics_event.dart';
 export 'analytics/custom_properties.dart';
 export 'analytics/user_profile.dart';
-export 'analytics/user_profile_demographics.dart';
 export 'analytics/user_profile_location.dart';
