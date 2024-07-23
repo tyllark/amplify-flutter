@@ -113,6 +113,20 @@ class EndpointClient {
       _endpointBuilder.location = null;
     }
 
+    final newDemographic = userProfile?.demographics;
+    if (newDemographic != null) {
+      _endpointBuilder.demographic
+        ..appVersion = newDemographic.appVersion
+        ..locale = newDemographic.locale
+        ..make = newDemographic.make
+        ..modelVersion = newDemographic.modelVersion
+        ..platform = newDemographic.platform
+        ..platformVersion = newDemographic.platformVersion
+        ..timezone = newDemographic.timezone;
+    } else {
+      _endpointBuilder.demographic = null;
+    }
+
     // Note that the [copyFromProfile]'s properties are copied to Endpoint metrics/attributes.
     // Instead of the [EndpointUserBuilder] object.
     // TODO(kylechen): Analytics API provides no way to remove these attributes ...

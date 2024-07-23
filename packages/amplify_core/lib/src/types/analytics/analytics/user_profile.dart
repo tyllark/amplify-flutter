@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import 'package:amplify_core/src/types/analytics/analytics/custom_properties.dart';
+import 'package:amplify_core/src/types/analytics/analytics/user_profile_demographics.dart';
 import 'package:amplify_core/src/types/analytics/analytics/user_profile_location.dart';
 
 /// User specific data.
@@ -11,6 +12,7 @@ class UserProfile {
     this.email,
     this.plan,
     this.location,
+    this.demographics,
     this.customProperties,
   });
 
@@ -18,5 +20,6 @@ class UserProfile {
   final String? email;
   final String? plan;
   final UserProfileLocation? location;
+  final UserProfileDemographics? demographics;
   final CustomProperties? customProperties;
 }
